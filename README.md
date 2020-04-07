@@ -1,0 +1,2 @@
+# WholefoodInstacartChecker
+ChromeExtension
