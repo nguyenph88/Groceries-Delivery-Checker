@@ -1,22 +1,24 @@
 {
    "manifest_version": 2,
-   "name": "Grocery Delivery Checker",
+   "name": "Groceries Delivery Checker",
    "permissions": [ "notifications" ],
-   "version": "0.1",
+   "version": "0.2",
    "background": {
+      "persistant": false,
       "scripts": [ "js/background.js" ]
    },
    "browser_action": {
-      "default_title": "Grocery Delivery Checker"
+      "default_title": "Groceries Delivery Checker"
    },
    "content_scripts": [ {
       "js": [ "js/content.js" ],
-      "matches": [ "https://*amazon.com/*", "https://*.instacart.com/*", "https://*.costco.com/*" ]
+      "matches": [ "https://*.amazon.com/*", "https://*.instacart.com/*", "https://*.costco.com/*" ],
+      "run_at": "document_end"
    } ],
-   "description": "Grocery Delivery Checker for Wholefood, Instacart and Costco",
+   "description": "Groceries Delivery Checker for Wholefood, Fresh, Instacart and Costco",
    "icons": {
-      "128": "img/icon_128.png",
-      "16": "img/icon_16.png",
-      "64": "img/icon_64.png"
+      "16": "icons/groceries_16.png",
+      "64": "icons/groceries_64.png",
+      "128": "icons/groceries_128.png"
    }
 }
