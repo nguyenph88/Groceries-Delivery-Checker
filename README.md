@@ -6,8 +6,10 @@ A very simple chrome extesion that help check the availabity of groceries delive
 The extension simply refreshes the current checkout page and check for delivery window, it's harmless but again use-at-your-own-risk, i'm using it right now if you wonder. The code is published and contribution is welcome.
 
 ***Is it cheating? My friend needs to check his/her computer every minute or so to get the delivery windows.***
-*Technially? No.
-Morally and ethically? It's how you look at it.*
+
+Technially? No.
+
+Morally and ethically? It's how you look at it.
 
 ## Instruction - How to
 
@@ -29,6 +31,10 @@ Simply add all the items you want into your cart then go to the checkout page wh
 
 
 ## Changelogs
+
+##### 0.0.3
+  - Add support for .co.uk
+  - Add a minute wait time when a delivery window found before refreshing again
 
 ##### 0.0.2
   - Refresh Rate will be randomized from 8-30 seconds (on the checkout page)
