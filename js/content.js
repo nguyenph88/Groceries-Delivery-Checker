@@ -6,7 +6,8 @@ var isDeliveryAvailable;
 
 var BASE_URL_COSTCO = 'costco.com';
 var BASE_URL_INSTACART = 'instacart.com';
-var BASE_URL_AMAZON = 'amazon.com';
+var BASE_URL_AMAZON_US = 'amazon.com';
+var BASE_URL_AMAZON_UK = 'amazon.co.uk';
 
 var CHECKOUT_PATH_INSTACART = '/store/checkout_v3';
 var CHECKOUT_PATH_AMAZON = '/gp/buy/shipoptionselect/handlers/display.html';
@@ -36,6 +37,7 @@ function checkAvailability() {
   if (isAmazonWholefoodDeliveryAvailable || isAmazonFreshDeliveryAvailable || isInstacartDeliveryAvailable) {
     chrome.runtime.sendMessage({message: "sendNotification"});
     console.log('Delivery Found! -- ' + getCurrentDateTime());
+    refreshRate = 60000;
     return true;
   }
   console.log('Delivery NOT Found -- ' + getCurrentDateTime());
@@ -62,7 +64,7 @@ window.addEventListener('load', () => {
     }, pathDetectTime);
 
   // AMAZON automatically refreshes
-  } else if (location.hostname.match(BASE_URL_AMAZON) && location.pathname == CHECKOUT_PATH_AMAZON){
+  } else if ((location.hostname.match(BASE_URL_AMAZON_US) && location.pathname == CHECKOUT_PATH_AMAZON) || (location.hostname.match(BASE_URL_AMAZON_UK) && location.pathname == CHECKOUT_PATH_AMAZON)){
     // set icon
     chrome.runtime.sendMessage({message : "updateIcon"});
 

@@ -12,7 +12,7 @@
    },
    "content_scripts": [ {
       "js": [ "js/content.js" ],
-      "matches": [ "https://*.amazon.com/*", "https://*.instacart.com/*", "https://*.costco.com/*" ],
+      "matches": [ "https://*.amazon.com/*", "https://*.amazon.co.uk/*","https://*.instacart.com/*", "https://*.costco.com/*" ],
       "run_at": "document_end"
    } ],
    "description": "Groceries Delivery Checker for Wholefood, Fresh, Instacart and Costco",
