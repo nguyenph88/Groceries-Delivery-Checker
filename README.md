@@ -32,16 +32,16 @@ Simply add all the items you want into your cart then go to the checkout page wh
 
 ## Changelogs
 
-##### 0.0.3
+##### 0.3
   - Add support for .co.uk
   - Add a minute wait time when a delivery window found before refreshing again
 
-##### 0.0.2
+##### 0.2
   - Refresh Rate will be randomized from 8-30 seconds (on the checkout page)
   - Removed Costco as individual site, it's now Instacart
   - Add icon indicate on the enabled pages
 
-##### 0.0.1
+##### 0.1
   - Initial release
 
 
